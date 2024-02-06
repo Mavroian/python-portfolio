@@ -23,6 +23,8 @@ def html_page(page_name):
     try:
         if '.html' in page_name:
             return render_template(page_name)
+        elif 'txt' in page_name:
+            return render_template(page_name)
         elif '.xml' in page_name:
             return render_template('sitemap.xml')
         return render_template(f'{page_name}.html')
